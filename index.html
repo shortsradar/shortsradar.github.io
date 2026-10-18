@@ -84,6 +84,9 @@ h1 .red{color:var(--rec)}
 .ctas{display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;text-decoration:none;padding:13px 20px;border-radius:999px;border:1.5px solid var(--ink);transition:transform .15s ease}
 .btn.solid{background:var(--ink);color:var(--bg)}
+button.btn{font-family:var(--f-body);background:transparent;color:var(--ink);cursor:pointer}
+.btn.share{border-color:var(--rec);color:var(--rec)}
+.share-msg{font-size:13px;color:var(--muted);align-self:center;min-height:1em}
 .btn:hover{transform:translateY(-2px)}
 @media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
 
@@ -292,6 +295,7 @@ footer a{text-underline-offset:2px}
 }
 </style>
 
+<script data-goatcounter="https://shortsradar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <div class="top gut"><div class="in">
@@ -305,7 +309,7 @@ footer a{text-underline-offset:2px}
     <h1 id="h1">What's <span class="stroke">working</span> in Shorts <span class="red">right now</span></h1>
     <p class="lede">Formats that are pulling views in <b>Gaming</b>, <b>Education</b>, <b>Comedy</b> and <b>Tech</b>, how to make your own version, and where <b>AI</b> fits into each one. Refreshed every Sunday.</p>
     <div class="stats" id="stats"></div>
-    <div class="ctas"><a class="btn solid" href="#ideas">See this week's ideas ↓</a><a class="btn" href="#ai">AI playbook</a></div>
+    <div class="ctas"><a class="btn solid" href="#ideas">See this week's ideas ↓</a><a class="btn" href="#ai">AI playbook</a><button class="btn share" type="button" data-share>Share with a creator ↗</button><span class="share-msg" role="status"></span></div>
   </div>
   <div class="phone-wrap">
     <div class="phone"><div class="screen playing" id="screen" role="region" aria-roledescription="carousel" aria-label="This week's hottest hooks"></div></div>
@@ -735,6 +739,21 @@ document.getElementById("belt").innerHTML = DATA.tools.map(t=>
   `<div class="tool"><div class="row"><b>${esc(t.name)}</b><span class="cost ${t.cost==="Free"?"free":""}">${esc(t.cost)}</span></div><p>${esc(t.does)}</p></div>`).join("");
 document.getElementById("sources").innerHTML = DATA.sources.map(([t,u])=>
   `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("");
+
+/* ---------- Share ---------- */
+document.querySelectorAll("[data-share]").forEach(b=>b.addEventListener("click", async ()=>{
+  const url = "https://shortsradar.github.io/";
+  const msg = b.parentElement.querySelector(".share-msg");
+  const say = t => { if(msg){ msg.textContent = t; setTimeout(()=>msg.textContent="", 3000); } };
+  const data = {title:"Shorts Radar", text:"What's working in YouTube Shorts this week, updated every Sunday:", url};
+  try{
+    if(navigator.share){ await navigator.share(data); return; }
+    await navigator.clipboard.writeText(url); say("Link copied");
+  }catch(e){
+    if(e && e.name==="AbortError") return;
+    say("Copy this link: "+url);
+  }
+}));
 
 renderTabs(); renderGrid();
 </script>
