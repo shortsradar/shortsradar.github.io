@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shorts Radar · What's working in YouTube Shorts this week</title>
+<meta name="description" content="A free weekly guide to the YouTube Shorts formats working right now in gaming, education, comedy and tech, with AI ideas and the rules that keep you monetized. Updated every Sunday.">
+<meta name="theme-color" content="#12101C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shorts Radar">
+<meta property="og:description" content="What's working in YouTube Shorts this week: gaming, education, comedy and tech. Updated every Sunday.">
+<meta property="og:url" content="https://shortsradar.github.io/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312101C'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23F2243E'/%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:wght@400;500;600;700&family=Martian+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a broadcast-poster page built around the vertical screen — hero headline beside a live 9:16 "feed" of this week's hottest hooks, a to-scale timeline band, then idea cards whose top half is a mini Short */
+:root{
+  --bg:#F6F5FB; --paper:#FFFFFF; --sunk:#ECEAF5; --ink:#12101C; --muted:#5E5A70; --line:#DEDBEA;
+  --band:#13111D; --band-fg:#F2F0F8; --band-muted:#9F9AB4; --band-line:#2C2940;
+  --screen:#0E0D16;
+  --rec:#F2243E; --game:#5B3DF5; --edu:#08816B; --com:#D9580A; --tech:#1B5FE8; --ai:#B8159F;
+  --f-display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"Martian Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0B0A11; --paper:#15131E; --sunk:#1E1B2A; --ink:#F2F0F8; --muted:#A9A4BC; --line:#2A2738;
+  --band:#1A1726; --band-fg:#F2F0F8; --band-muted:#A9A4BC; --band-line:#34304A;
+  --screen:#07060C;
+  --rec:#FF4459; --game:#6E55FF; --edu:#0F9A80; --com:#E2630F; --tech:#3A78FF; --ai:#D52EBB; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0B0A11; --paper:#15131E; --sunk:#1E1B2A; --ink:#F2F0F8; --muted:#A9A4BC; --line:#2A2738;
+  --band:#1A1726; --band-fg:#F2F0F8; --band-muted:#A9A4BC; --band-line:#34304A;
+  --screen:#07060C;
+  --rec:#FF4459; --game:#6E55FF; --edu:#0F9A80; --com:#E2630F; --tech:#3A78FF; --ai:#D52EBB; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
+.gut{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.in{max-width:1240px;margin:0 auto}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--f-display);text-transform:uppercase;font-weight:900;line-height:.88;letter-spacing:-.005em;text-wrap:balance}
+h3{font-family:var(--f-body);font-size:19px;font-weight:700;line-height:1.25;text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:2.5px solid var(--rec);outline-offset:3px;border-radius:6px}
+.mono{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.g-gaming{--g:var(--game)} .g-edu{--g:var(--edu)} .g-comedy{--g:var(--com)} .g-tech{--g:var(--tech)} .g-ai{--g:var(--ai)}
+
+/* ---------- Top bar ---------- */
+.top{padding-block:18px}
+.top .in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.mark{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:900;font-size:24px;text-transform:uppercase;letter-spacing:.02em}
+.rec{width:12px;height:12px;border-radius:50%;background:var(--rec);flex:none;position:relative}
+.rec::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--rec);opacity:.35}
+@media (prefers-reduced-motion:no-preference){.rec::after{animation:ping 2s ease-out infinite}}
+@keyframes ping{0%{transform:scale(.6);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+.top nav{display:flex;gap:6px;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-weight:600;font-size:14px;padding:7px 12px;border-radius:999px;color:var(--muted)}
+.top nav a:hover{background:var(--sunk);color:var(--ink)}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:24px 64px}
+.hero .in{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:26px;min-width:0}
+.kicker{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--sunk);color:var(--muted);white-space:nowrap}
+.pill.live{background:var(--rec);color:#fff}
+h1{font-size:clamp(64px,10.5vw,152px)}
+h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--ink)}
+h1 .red{color:var(--rec)}
+.lede{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:52ch;line-height:1.5}
+.lede b{color:var(--ink);font-weight:600}
+.stats{display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--line)}
+.stat{display:flex;flex-direction:column;gap:2px;padding:16px 28px 0 0;margin-right:28px;border-right:1px solid var(--line);min-width:0}
+.stat:last-child{border-right:0;margin-right:0}
+.stat .n{font-family:var(--f-display);font-weight:900;font-size:44px;line-height:1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13px;color:var(--muted)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;text-decoration:none;padding:13px 20px;border-radius:999px;border:1.5px solid var(--ink);transition:transform .15s ease}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* Phone feed */
+.phone-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0}
+.phone{width:min(100%,320px);aspect-ratio:9/16;max-width:100%;border-radius:38px;padding:10px;background:var(--screen);box-shadow:0 0 0 1.5px var(--line),0 40px 80px -30px rgba(18,16,28,.45);position:relative}
+.screen{position:relative;width:100%;height:100%;border-radius:29px;overflow:hidden;background:var(--screen);cursor:pointer}
+.slide{position:absolute;inset:0;padding:44px 18px 20px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;
+  background:radial-gradient(120% 70% at 20% 0%, color-mix(in oklab, var(--g) 90%, #fff 10%) 0%, var(--g) 40%, color-mix(in oklab, var(--g) 35%, #000) 100%);
+  opacity:0;transition:opacity .45s ease}
+.slide.on{opacity:1}
+.segs{position:absolute;top:14px;left:14px;right:14px;display:flex;gap:4px;z-index:3}
+.segs span{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.3);overflow:hidden}
+.segs span i{display:block;height:100%;width:0;background:#fff}
+.segs span.done i{width:100%}
+.segs span.cur i{width:100%}
+@media (prefers-reduced-motion:no-preference){ .playing .segs span.cur i{width:0;animation:fill var(--dur,4.2s) linear forwards} }
+@keyframes fill{to{width:100%}}
+.slide .who{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600}
+.slide .av{width:26px;height:26px;border-radius:50%;background:#fff;color:var(--g);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:13px}
+.slide .hk{font-family:var(--f-display);font-weight:800;font-size:clamp(28px,3vw,36px);line-height:1.02;text-wrap:balance;text-shadow:0 2px 18px rgba(0,0,0,.25);padding-right:40px}
+.slide .meta{display:flex;flex-direction:column;gap:6px;padding-right:44px}
+.slide .meta b{font-size:14px}
+.slide .meta .mono{opacity:.85;font-size:10px}
+.rail{position:absolute;right:12px;bottom:20px;display:flex;flex-direction:column;gap:16px;z-index:2;color:#fff}
+.rail svg{width:26px;height:26px;display:block;filter:drop-shadow(0 1px 4px rgba(0,0,0,.3))}
+.feed-ctl{display:flex;align-items:center;gap:10px}
+.feed-ctl button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;display:grid;place-items:center;font-size:16px}
+.feed-ctl button:hover{border-color:var(--ink)}
+.feed-ctl .ct{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);min-width:110px;text-align:center;font-variant-numeric:tabular-nums}
+
+/* ---------- Timeline band ---------- */
+.band{background:var(--band);color:var(--band-fg);padding-block:56px 48px}
+.band .in{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,2fr);gap:40px;align-items:start}
+.count{display:flex;flex-direction:column;gap:6px}
+.count .mono{color:var(--band-muted)}
+.count .big{font-family:var(--f-display);font-weight:900;font-size:clamp(96px,12vw,168px);line-height:.82;color:var(--rec);font-variant-numeric:tabular-nums}
+.count .unit{font-family:var(--f-display);font-weight:800;font-size:28px;text-transform:uppercase;line-height:1}
+.count p{color:var(--band-muted);font-size:15px;max-width:30ch;margin-top:8px}
+.count p b{color:var(--band-fg)}
+.tl-scroll{overflow-x:auto;padding-bottom:8px;min-width:0}
+.tl{position:relative;min-width:880px;height:440px}
+.tl .axis{position:absolute;left:0;right:0;top:219px;height:2px;background:var(--band-line)}
+.tl .past{position:absolute;left:0;top:219px;height:2px;background:var(--band-muted)}
+.tl .today{position:absolute;top:196px;height:48px;width:2px;background:var(--rec)}
+.tl .today span{position:absolute;top:-18px;left:6px;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;color:var(--rec);white-space:nowrap;font-weight:600}
+.ev{position:absolute;width:172px;transform:translateX(-12px)}
+.ev .dot{position:absolute;left:5px;width:15px;height:15px;border-radius:50%;background:var(--band);border:3px solid var(--g,var(--band-fg));box-sizing:border-box}
+.ev.up .dot{bottom:-8px}
+.ev.down .dot{top:-9px}
+.ev .stem{position:absolute;left:12px;width:1px;background:var(--band-line)}
+.ev.up .stem{bottom:7px}
+.ev.down .stem{top:6px}
+.ev .d{font-family:var(--f-mono);font-size:11px;font-weight:600;color:var(--band-fg)}
+.ev .w{font-size:13.5px;line-height:1.35;color:var(--band-muted);margin-top:3px}
+.ev.is-past .d{color:var(--band-muted)}
+.ev .gtag{display:inline-flex;gap:4px;margin-top:6px}
+.ev .gtag i{width:8px;height:8px;border-radius:2px;background:var(--g)}
+
+/* ---------- Section heads ---------- */
+section.sec{padding-block:88px 0}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:end;margin-bottom:32px}
+.sh h2{font-size:clamp(48px,7vw,96px)}
+.sh p{color:var(--muted);font-size:17px;max-width:52ch}
+.sh .mono{color:var(--rec);font-weight:600;display:block;margin-bottom:14px}
+
+/* Filters */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.tab{font:700 15px var(--f-body);padding:10px 16px 10px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:border-color .15s}
+.tab:hover{border-color:var(--ink)}
+.tab .sw{width:14px;height:14px;border-radius:4px;background:var(--g,var(--ink))}
+.tab .n{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.tab[aria-pressed="true"]{background:var(--g,var(--ink));border-color:var(--g,var(--ink));color:#fff}
+.tab[aria-pressed="true"] .sw{background:#fff}
+.tab[aria-pressed="true"] .n{color:rgba(255,255,255,.8)}
+.tab.all[aria-pressed="true"]{color:var(--bg)}
+.tab.all[aria-pressed="true"] .sw{background:var(--bg)}
+.tab.all[aria-pressed="true"] .n{color:var(--bg);opacity:.75}
+
+/* Cards */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 48px -28px rgba(18,16,28,.35)}
+@media (prefers-reduced-motion:reduce){.card:hover{transform:none}}
+.card .scr{background:radial-gradient(130% 90% at 0% 0%, color-mix(in oklab, var(--g) 88%, #fff 12%), var(--g) 45%, color-mix(in oklab, var(--g) 45%, #000) 100%);color:#fff;padding:18px 18px 16px;display:flex;flex-direction:column;gap:18px;min-height:210px;position:relative}
+.scr-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.gname{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;border:1px solid rgba(255,255,255,.55);border-radius:999px;padding:3px 9px}
+.heat{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.heat i{display:inline-flex;gap:2px;align-items:flex-end}
+.heat i b{width:4px;border-radius:1px;background:currentColor;opacity:.3}
+.heat i b:nth-child(1){height:7px}.heat i b:nth-child(2){height:10px}.heat i b:nth-child(3){height:13px}
+.heat i b.on{opacity:1}
+.scr .hk{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1.02;text-wrap:balance;flex:1}
+.scr-bot{display:flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:10px}
+.scr-bot .prog{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
+.scr-bot .prog::after{content:"";position:absolute;inset:0 auto 0 0;width:7%;background:#fff}
+.card .body{padding:20px 20px 18px;display:flex;flex-direction:column;gap:16px;flex:1}
+dl{margin:0;display:flex;flex-direction:column;gap:12px}
+dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:3px;font-weight:600}
+dd{margin:0;font-size:15px}
+.aibox{background:var(--sunk);border-radius:12px;padding:12px 14px}
+.aibox dt{color:var(--ai)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);flex-wrap:wrap}
+.yt{font-weight:700;font-size:14px;color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.yt .ar{color:var(--g);font-size:16px}
+.yt:hover{text-decoration:underline;text-underline-offset:3px}
+.made{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);cursor:pointer;user-select:none;font-weight:500}
+.made input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border-radius:7px;border:1.5px solid var(--line);margin:0;display:grid;place-items:center;cursor:pointer;background:var(--paper)}
+.made input:checked{background:var(--g);border-color:var(--g)}
+.made input:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.card.done .scr{filter:saturate(.25) brightness(.9)}
+.card.done .made{color:var(--ink)}
+
+/* ---------- AI matrix ---------- */
+.matrix{display:grid;grid-template-columns:150px repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--paper)}
+.matrix > div{padding:18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+.matrix > div:nth-child(5n){border-right:0}
+.matrix > div.last{border-bottom:0}
+.mh{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:26px;line-height:1}
+.mh i{width:14px;height:14px;border-radius:4px;background:var(--g)}
+.rh{font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:22px;line-height:1;color:var(--ai);background:var(--sunk)}
+.rh small{display:block;font-family:var(--f-body);text-transform:none;font-weight:500;font-size:13px;color:var(--muted);margin-top:8px;line-height:1.4}
+.corner{background:var(--sunk)}
+.matrix ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14.5px;line-height:1.4}
+.matrix li{display:flex;gap:9px}
+.matrix li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--g);margin-top:8px}
+
+.belt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+.tool{border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--paper);min-width:0}
+.tool .row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.tool b{font-size:15px;line-height:1.3}
+.cost{font-family:var(--f-mono);font-size:10px;font-weight:600;letter-spacing:.04em;padding:3px 8px;border-radius:999px;background:var(--sunk);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.cost.free{background:var(--edu);color:#fff}
+.tool p{font-size:14px;color:var(--muted);line-height:1.45}
+.note{font-size:13.5px;color:var(--muted);margin-top:14px}
+
+/* ---------- Anatomy ---------- */
+.anat{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:22px}
+.bar{display:grid;grid-template-columns:2fr 23fr 5fr;height:72px;border-radius:14px;overflow:hidden}
+.bar > div{display:flex;align-items:center;padding:0 16px;font-family:var(--f-display);font-weight:900;text-transform:uppercase;font-size:22px;white-space:nowrap;overflow:hidden;min-width:0}
+.bar .a{background:var(--rec);color:#fff;justify-content:center;padding:0}
+.bar .a span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:13px;font-family:var(--f-mono);letter-spacing:.08em}
+.bar .b{background:repeating-linear-gradient(90deg, var(--sunk) 0 calc(100%/23 - 1px), var(--line) calc(100%/23 - 1px) calc(100%/23));color:var(--muted)}
+.bar .c{background:var(--ink);color:var(--bg);gap:8px}
+.ticks{position:relative;height:16px;font-family:var(--f-mono);font-size:10.5px;color:var(--muted);margin-top:-12px;font-variant-numeric:tabular-nums}
+.ticks span{position:absolute;transform:translateX(-50%)}
+.ticks span:first-child{transform:none}.ticks span:last-child{transform:translateX(-100%)}
+.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.phase{display:flex;flex-direction:column;gap:6px;min-width:0}
+.phase .ts{font-family:var(--f-mono);font-size:11px;font-weight:600;color:var(--rec)}
+.phase p{color:var(--muted);font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding-top:22px;border-top:1px solid var(--line)}
+.fact{display:flex;flex-direction:column;gap:4px;min-width:0}
+.fact .n{font-family:var(--f-display);font-weight:900;font-size:56px;line-height:.9;font-variant-numeric:tabular-nums}
+.fact p{font-size:14px;color:var(--muted)}
+
+/* ---------- Plan + rules ---------- */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.panel h2{font-size:clamp(36px,4.4vw,56px)}
+.panel > p{color:var(--muted);font-size:16px}
+.panel > p b{color:var(--ink)}
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.day{display:flex;flex-direction:column;gap:6px;align-items:stretch;min-width:0}
+.day .d{font-family:var(--f-mono);font-size:10px;color:var(--muted);text-align:center}
+.day .p{aspect-ratio:9/16;border-radius:8px;background:var(--g);display:flex;align-items:flex-end;justify-content:center;padding-bottom:6px;color:#fff;font-family:var(--f-mono);font-size:8.5px;letter-spacing:.04em;text-transform:uppercase;overflow:hidden;max-width:100%}
+.day.rest .p{background:transparent;border:1.5px dashed var(--line);color:var(--muted)}
+.panel ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.rules{background:var(--band);color:var(--band-fg);border-color:var(--band)}
+.rules .mono{color:var(--rec)}
+.rules ol{margin:0;padding:0;list-style:none;counter-reset:r;display:flex;flex-direction:column;gap:16px}
+.rules li{counter-increment:r;display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;font-size:15px;color:var(--band-muted)}
+.rules li::before{content:counter(r,decimal-leading-zero);font-family:var(--f-display);font-weight:900;font-size:28px;line-height:1;color:var(--rec)}
+.rules li b{color:var(--band-fg);display:block;font-size:16px;margin-bottom:2px}
+
+footer{padding-block:72px 48px}
+footer .in{border-top:1px solid var(--line);padding-top:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px;font-size:13.5px;color:var(--muted)}
+footer ul{margin:0;padding-left:16px;columns:2;column-gap:28px}
+footer li{break-inside:avoid;margin-bottom:5px}
+footer a{text-underline-offset:2px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1060px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .belt{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .matrix{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .matrix > div{border-right:1px solid var(--line)!important}
+  .corner,.rh,.hdr{display:none}
+  .matrix > div.last{border-bottom:1px solid var(--line)}
+  .band .in{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .hero .in{grid-template-columns:1fr}
+  .sh{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  footer .in{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  .grid,.belt,.matrix,.phases,.facts{grid-template-columns:1fr}
+  .stat{padding-right:18px;margin-right:18px}
+  .stat .n{font-size:36px}
+  h1 .stroke{-webkit-text-stroke-width:1.5px}
+  .bar{height:60px}.bar > div{font-size:16px;padding:0 10px}
+  footer ul{columns:1}
+  .top nav{display:none}
+}
+</style>
+
+</head>
+<body>
+<div class="top gut"><div class="in">
+  <div class="mark"><span class="rec" aria-hidden="true"></span>Shorts Radar</div>
+  <nav aria-label="Sections"><a href="#ideas">Ideas</a><a href="#ai">AI playbook</a><a href="#anatomy">Anatomy</a><a href="#rules">Rules</a></nav>
+</div></div>
+
+<section class="hero gut" aria-labelledby="h1"><div class="in">
+  <div class="hero-copy">
+    <div class="kicker"><span class="pill live">● Live this week</span><span class="pill" id="weekpill"></span><span class="pill">English audience</span></div>
+    <h1 id="h1">What's <span class="stroke">working</span> in Shorts <span class="red">right now</span></h1>
+    <p class="lede">Formats that are pulling views in <b>Gaming</b>, <b>Education</b>, <b>Comedy</b> and <b>Tech</b>, how to make your own version, and where <b>AI</b> fits into each one. Refreshed every Sunday.</p>
+    <div class="stats" id="stats"></div>
+    <div class="ctas"><a class="btn solid" href="#ideas">See this week's ideas ↓</a><a class="btn" href="#ai">AI playbook</a></div>
+  </div>
+  <div class="phone-wrap">
+    <div class="phone"><div class="screen playing" id="screen" role="region" aria-roledescription="carousel" aria-label="This week's hottest hooks"></div></div>
+    <div class="feed-ctl">
+      <button id="prev" aria-label="Previous hook">‹</button>
+      <span class="ct" id="ct" aria-live="polite"></span>
+      <button id="next" aria-label="Next hook">›</button>
+      <button id="pause" aria-label="Pause">❚❚</button>
+    </div>
+  </div>
+</div></section>
+
+<section class="band gut" aria-labelledby="tl-h"><div class="in">
+  <div class="count">
+    <span class="mono" id="tl-h">Next big moment</span>
+    <span class="big" id="cdn"></span>
+    <span class="unit" id="cdu"></span>
+    <p id="cdw"></p>
+  </div>
+  <div class="tl-scroll"><div class="tl" id="tl"></div></div>
+</div></section>
+
+<section class="sec gut" id="ideas" aria-labelledby="ideas-h"><div class="in">
+  <div class="sh">
+    <div><span class="mono">01 · The board</span><h2 id="ideas-h">This week's ideas</h2></div>
+    <p>Copy the structure, never the video. Each card shows an example opening line, why the format works now, how to make it yours, and an AI angle.</p>
+  </div>
+  <div class="tabs" role="group" aria-label="Filter by genre" id="tabs"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="sec gut" id="ai" aria-labelledby="ai-h"><div class="in">
+  <div class="sh">
+    <div><span class="mono">02 · AI × your genres</span><h2 id="ai-h">Two ways to use AI</h2></div>
+    <p>Make AI the <b>topic</b> of your Shorts, or use it as a <b>tool</b> to make them faster. YouTube allows AI-made videos. It stops paying for low-effort, mass-produced ones, so keep your voice and your opinion in every Short.</p>
+  </div>
+  <div class="matrix" id="matrix"></div>
+  <div class="belt" id="belt"></div>
+  <p class="note">Prices come from published reviews and may change. YouTube's own AI clips carry an invisible SynthID watermark and an AI label.</p>
+</div></section>
+
+<section class="sec gut" id="anatomy" aria-labelledby="an-h"><div class="in">
+  <div class="sh">
+    <div><span class="mono">03 · The build</span><h2 id="an-h">Anatomy of a 30-second Short</h2></div>
+    <p>Every idea on this page fits the same shape. Drawn to scale: each tick is one second.</p>
+  </div>
+  <div class="anat">
+    <div class="bar" role="img" aria-label="Timeline: hook from 0 to 2 seconds, one idea from 2 to 25 seconds, payoff and loop from 25 to 30 seconds">
+      <div class="a"><span>HOOK</span></div><div class="b">One idea · no pauses</div><div class="c">Payoff ↻</div>
+    </div>
+    <div class="ticks"><span style="left:0">0:00</span><span style="left:33.33%">0:10</span><span style="left:66.66%">0:20</span><span style="left:100%">0:30</span></div>
+    <div class="phases">
+      <div class="phase"><span class="ts">0:00 – 0:02</span><h3>Hook first</h3><p>Lead with the payoff or the tension. If the first two seconds don't grab, people swipe.</p></div>
+      <div class="phase"><span class="ts">0:02 – 0:25</span><h3>One idea only</h3><p>Cut every pause and every "hi guys". Add captions so it works on mute.</p></div>
+      <div class="phase"><span class="ts">0:25 – 0:30</span><h3>Payoff, then loop</h3><p>End on a frame that flows into the first one. Rewatches help the Short travel.</p></div>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="n">20–35s</span><p>Length reported to perform best for going viral. Shorts can run 3 minutes, but long ones must hold attention.</p></div>
+      <div class="fact"><span class="n">~16s</span><p>Average watch time per Short across 799,718 videos analysed by Metricool. Get to the point.</p></div>
+      <div class="fact"><span class="n">0s</span><p>Minimum watch time for a view to count. Views are easy; retention decides who sees your next Short.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec gut" id="rules" aria-label="Plan and rules"><div class="in two">
+  <div class="panel">
+    <span class="mono" style="color:var(--rec);font-weight:600">04 · Your channel</span>
+    <h2>Four genres, one channel</h2>
+    <p>Viewers subscribe to a promise. Tie your genres together with one through-line, like <b>"games and gadgets, explained, with jokes."</b> Comedy works best as the tone across everything.</p>
+    <div class="week" aria-label="Example weekly posting plan">
+      <div class="day g-gaming"><span class="d">MON</span><span class="p">Game</span></div>
+      <div class="day g-tech"><span class="d">TUE</span><span class="p">Tech</span></div>
+      <div class="day g-edu"><span class="d">WED</span><span class="p">Learn</span></div>
+      <div class="day g-gaming"><span class="d">THU</span><span class="p">Game</span></div>
+      <div class="day g-comedy"><span class="d">FRI</span><span class="p">Skit</span></div>
+      <div class="day g-tech"><span class="d">SAT</span><span class="p">Tech</span></div>
+      <div class="day rest"><span class="d">SUN</span><span class="p">Plan</span></div>
+    </div>
+    <ul>
+      <li>Gaming twice a week while GTA 6 and MW4 are the conversation.</li>
+      <li>End tech and education Shorts with a pointer to a longer video. Shorts bring people in; long videos earn far more per view.</li>
+      <li>Sunday: open this page and your analytics, then plan the week.</li>
+    </ul>
+  </div>
+  <div class="panel rules">
+    <span class="mono" style="font-weight:600">05 · Stay monetized</span>
+    <h2>Rules that protect your income</h2>
+    <ol>
+      <li><span><b>Make it, don't re-upload it.</b>Re-posted or lightly edited clips from other creators count as reused content and can't earn money.</span></li>
+      <li><span><b>No templated mass production.</b>Since July 16, 2026, YouTube won't pay for generic, repetitive or template-based videos, off-putting content, or AI personas advising on sensitive topics like health and finance. Channels built on these get removed from the Partner Program.</span></li>
+      <li><span><b>Label realistic AI.</b>Turn on "altered or synthetic content" when AI footage looks real. The label itself doesn't reduce reach.</span></li>
+      <li><span><b>Watch the 1-minute line.</b>A Short over 1 minute that gets a Content ID claim (game soundtracks, trailer music) gets blocked. Keep licensed audio clips under 60 seconds.</span></li>
+      <li><span><b>Know the goal.</b>1,000 subscribers plus 10 million Shorts views in 90 days (or 4,000 long-form watch hours) unlocks ad revenue.</span></li>
+    </ol>
+  </div>
+</div></section>
+
+<footer class="gut"><div class="in">
+  <div><span class="mono">Sources this week</span><p style="margin-top:10px">Hot, Rising and Steady ratings are an editorial read of this week's news and creator reports, not YouTube data. Example hooks are written for this page.</p><p style="margin-top:10px">Shorts Radar is an independent guide for creators. It is not affiliated with YouTube or Google.</p></div>
+  <ul id="sources"></ul>
+</div></footer>
+
+<script>
+/* ===== WEEKLY DATA — the refresh task edits only this block ===== */
+const DATA = {
+  updated: "2026-10-18",
+  moments: [
+    {date:"2026-10-15", label:"Oct 15", what:"GTA 6 launch trailer drops, passes 1M views in about 30 minutes", tags:["gaming"]},
+    {date:"2026-10-23", label:"Oct 23", what:"Call of Duty: Modern Warfare 4 launches", tags:["gaming"]},
+    {date:"2026-10-23", label:"Oct 23", what:"iPhone Duo, Apple's first foldable ($1,999), goes on sale", tags:["tech"]},
+    {date:"2026-10-27", label:"Oct 27", what:"Rumored Apple event: touchscreen OLED MacBook Pro, M6 iMac, OLED iPad mini", tags:["tech"]},
+    {date:"2026-10-29", label:"Oct 29", what:"Phantom Blade Zero and The Wolf Among Us Remastered release", tags:["gaming"]},
+    {date:"2026-10-31", label:"Oct 31", what:"Halloween: spooky remixes of any format", tags:["gaming","edu","comedy"]},
+    {date:"2026-11-19", label:"Nov 19", what:"GTA 6 launches on PS5 and Xbox Series X|S (no PC version announced)", tags:["gaming","comedy"]}
+  ],
+  trends: [
+    {g:"gaming", heat:"hot", title:"GTA 6 countdown & trailer breakdowns",
+     why:"Rockstar's launch trailer came out Oct 15 and passed 1M views in about half an hour. The game lands Nov 19, so interest grows every day until then.",
+     make:"Run a daily series: \"32 days until GTA 6: the detail nobody noticed.\" One detail per Short: freeze-frame, circle it, explain in your voice.",
+     ai:"Ask an AI assistant for 3 hook options from your notes each day and pick the punchiest. Keep trailer clips short, because the soundtrack can trigger Content ID.",
+     hook:"Pause the GTA 6 trailer here. Look at the billboard on the left.", q:"gta 6 trailer details"},
+    {g:"gaming", heat:"hot", title:"Launch-week meta loadouts",
+     why:"Modern Warfare 4 releases Oct 23. In launch week, players search for loadouts and settings before full guides exist.",
+     make:"\"The MW4 loadout that's secretly overpowered\" in 30 seconds: build on screen, a short kill montage, stats card at the end.",
+     ai:"Have AI summarize the patch notes and pull out the changed numbers, then prove them in your own gameplay.",
+     hook:"Everyone is sleeping on this MW4 SMG.", q:"mw4 best loadout"},
+    {g:"gaming", heat:"steady", title:"Absurd challenge runs",
+     why:"Suspense plus a clear payoff. Viewers stay to see if you pull it off, and the result invites a rewatch.",
+     make:"Put the game and the rule up front: \"Hardest boss vs a fishing rod (1 HP)\". Show the attempt counter on screen.",
+     ai:"Let viewers pick the next rule in the comments and use AI to sort hundreds of suggestions into a top-5 shortlist.",
+     hook:"Attempt 214. One hit and it's over.", q:"1 hp boss challenge"},
+    {g:"gaming", heat:"steady", title:"Hidden details & easter eggs",
+     why:"A hidden detail rewards a second and third watch, and replays push the Short to more viewers. Minecraft, GTA and Fortnite are among the best-performing games on Shorts.",
+     make:"\"The detail you missed after 500 hours.\" Show it fast, then end on a frame that loops into the start.",
+     ai:"Use Veo inside the Shorts camera for a 3-second dramatic intro card. Keep the gameplay itself real.",
+     hook:"This NPC only says this line once. Ever.", q:"game easter egg you missed"},
+    {g:"gaming", heat:"seasonal", title:"Halloween event tier lists",
+     why:"October gaming feeds are full of Halloween updates and spooky event modes. The window closes Oct 31.",
+     make:"Rank every Halloween skin or event mode from worst to best in 30 seconds, tier-list style.",
+     ai:"Dream Screen can generate a spooky background behind your facecam in seconds.",
+     hook:"Ranking every Halloween skin. #1 is a crime.", q:"halloween event tier list"},
+
+    {g:"edu", heat:"hot", title:"One question, one answer",
+     why:"Explainers that answer a real search can rank in YouTube and Google search, not just the feed. One analysis reports about 76% watch-through for tight 50–60 second explainers.",
+     make:"Use the exact question people type as the title. Answer it in the first sentence, then show why.",
+     ai:"Ask AI to list the questions people ask about your topic, then answer them yourself with your own example.",
+     hook:"Why does your phone die faster in the cold? Three reasons.", q:"explained in 60 seconds"},
+    {g:"edu", heat:"rising", title:"Lessons in numbered parts",
+     why:"Viewers favor channels with recurring formats and clear arcs. Seeing \"Part 4\" sends people looking for parts 1 to 3.",
+     make:"Pick a mini-course (\"Learn Python in 10 Shorts\"), number every part and pin the playlist.",
+     ai:"Have AI draft the 10-part outline, then rewrite each script in your own words and test every step yourself.",
+     hook:"Part 4: the Python trick every beginner skips.", q:"learn in 60 seconds part 1"},
+    {g:"edu", heat:"steady", title:"Story-driven mini history",
+     why:"Historical stories, strange true events and mini-documentaries are among the formats that keep outperforming in short-form.",
+     make:"Open on the strangest fact, then rewind: \"In 1983 one man stopped a nuclear war by ignoring an alarm.\"",
+     ai:"Use Veo to show scenes you can't film, with your narration on top. Label realistic AI scenes.",
+     hook:"A unit mix-up cost NASA a $125 million spacecraft.", q:"history stories shorts"},
+    {g:"edu", heat:"steady", title:"\"You're doing it wrong\"",
+     why:"A small fix people can use immediately gets saved and shared, and saves are a strong signal on Shorts.",
+     make:"Show the common way, a big X, then the right way. One fix per Short.",
+     ai:"AI captions with word-by-word highlighting help people follow along with the sound off.",
+     hook:"You've been charging your laptop wrong.", q:"youre doing it wrong"},
+
+    {g:"comedy", heat:"hot", title:"Waiting-for-GTA-6 skits",
+     why:"Millions of people share the same anticipation, which makes the jokes instantly relatable. Comedy is among the most shared categories on Shorts.",
+     make:"Skits like \"me requesting Nov 19 off work\" or \"my family when I disappear into Vice City.\"",
+     ai:"Ask AI for 20 premises, keep the 2 that make you laugh, and write the punchlines yourself.",
+     hook:"Me explaining to my family why I'm unavailable until January.", q:"gta 6 meme"},
+    {g:"comedy", heat:"rising", title:"Micro-dramas with recurring characters",
+     why:"Complete stories under 60 seconds are a major 2026 trend, and recurring characters make people follow for the next episode.",
+     make:"Create 2–3 characters (the overconfident gamer, the tech-support dad) and give them a weekly storyline.",
+     ai:"A disclosed AI voice can play a side character. Keep yourself as the main character.",
+     hook:"Episode 6: Dad tries to set up the new console.", q:"pov skit series"},
+    {g:"comedy", heat:"rising", title:"Non-verbal visual gags",
+     why:"Visual-only formats work in any language, so one Short can travel worldwide.",
+     make:"One setup, one visual punchline, no dialogue.",
+     ai:"Use Veo or Dream Screen for one impossible visual punchline inside an otherwise real scene.",
+     hook:"(No words.) Your face when the download freezes at 99%.", q:"no talking comedy shorts"},
+    {g:"comedy", heat:"steady", title:"\"If apps were people\"",
+     why:"Turning everyday tech into characters is relatable and repeatable as a series.",
+     make:"Apps at a party, browser tabs as roommates, notifications as coworkers.",
+     ai:"Make AI itself the character: \"If AI chatbots were coworkers\" practically writes itself.",
+     hook:"If your AI assistant was your coworker.", q:"if apps were people"},
+
+    {g:"tech", heat:"hot", title:"Foldable iPhone first takes",
+     why:"The iPhone Duo, Apple's first foldable, starts at $1,999 and goes on sale Oct 23. Launch week is when curiosity peaks.",
+     make:"\"Is a $1,999 foldable worth it?\" Answer in one line, then three quick reasons. No unit yet? Compare specs on screen.",
+     ai:"Use AI to compare spec sheets quickly, then check every number against Apple's official page.",
+     hook:"Is a $1,999 iPhone worth it? My answer in 30 seconds.", q:"iphone duo"},
+    {g:"tech", heat:"hot", title:"\"I tested this AI so you don't have to\"",
+     why:"AI-powered gadgets and tools lead this month's tech launches. Quick demos of one specific tool work in the feed and in search.",
+     make:"One tool, one real task, a verdict with a score out of 10. Screen-record everything.",
+     ai:"Here AI is the topic: test new models and AI gadgets on a task your viewers actually have.",
+     hook:"I asked three AIs to plan my week. Only one got it right.", q:"ai tool tested"},
+    {g:"tech", heat:"rising", title:"Apple event reactions (Oct 27, rumored)",
+     why:"Reports point to an Oct 27 event with Apple's first touchscreen OLED MacBook Pro, an M6 iMac and an OLED iPad mini.",
+     make:"Post \"what to expect\" before, then a 30-second reaction within hours of the announcement.",
+     ai:"Use AI to summarize the keynote transcript so your reaction goes up first.",
+     hook:"Apple's first touchscreen Mac. Three things that matter.", q:"touchscreen macbook pro"},
+    {g:"tech", heat:"steady", title:"3 hidden features in 30 seconds",
+     why:"Small, usable tips get saved, and every software update gives you new material.",
+     make:"Phone on screen, one feature every 8–10 seconds, numbered on screen.",
+     ai:"AI captions plus AI audio cleanup make a phone recording sound professional.",
+     hook:"Three iPhone settings to turn off right now.", q:"hidden iphone features"},
+    {g:"tech", heat:"steady", title:"Short-to-long funnel",
+     why:"Shorts pay little per view. One 120K-subscriber tech channel fixed views-without-results by ending every Short with a pointer to its full review.",
+     make:"End every tech Short with \"full review linked\" and attach the related video.",
+     ai:"Clipping tools like OpusClip cut your long reviews into several Shorts automatically.",
+     hook:"The one flaw nobody mentions. Full review linked.", q:"tech review"}
+  ],
+  ai: {
+    gaming:{topic:["AI-generated games that are actually fun","AI-powered NPCs and mods (\"I talked to an AI villager\")","Can AI beat me at my own game?"],
+            tool:["Auto-clip your long streams into Shorts","Veo intro cards for countdown series","AI to sort comment suggestions for challenges"]},
+    edu:   {topic:["How AI chatbots work, explained in 60 seconds","Which AI tool is best for studying?","Myths about AI, busted"],
+            tool:["Draft outlines and question lists, then fact-check","Veo visuals for things you can't film","Word-by-word AI captions"]},
+    comedy:{topic:["AI chatbots as overconfident coworkers","Asking AI to rate my room, outfit or setup","When the AI autocorrect betrays you"],
+            tool:["Brainstorm 20 premises, keep the best 2","Disclosed AI voices for side characters","One AI visual punchline per skit"]},
+    tech:  {topic:["New AI models this month, tested on real tasks","AI gadgets: hearing glasses, AI wearables","AI vs human speed tests"],
+            tool:["Summarize keynotes and spec sheets fast","AI audio cleanup for phone recordings","Turn long reviews into Shorts"]}
+  },
+  tools: [
+    {name:"Veo 3 Fast (Shorts camera)", does:"Makes short video clips with sound from a text prompt, right in the YouTube app. Available in the US, UK, Canada, Australia and New Zealand.", cost:"Free"},
+    {name:"Dream Screen", does:"AI-generated backgrounds and clips behind you in a Short.", cost:"Free"},
+    {name:"YouTube Studio: Inspiration tab", does:"Generates ideas, titles and outlines based on your own channel.", cost:"Free"},
+    {name:"YouTube Studio: Ask Studio", does:"Ask questions about your analytics in plain language.", cost:"Free"},
+    {name:"YouTube Create", does:"Free editor with auto-captions, audio cleanup and Edit with AI.", cost:"Free"},
+    {name:"CapCut", does:"Phone editing, auto captions in 80+ languages, voiceovers.", cost:"Free"},
+    {name:"OpusClip", does:"Cuts long videos into Shorts with captions automatically.", cost:"Free plan · $15/mo"},
+    {name:"InVideo AI", does:"Script-to-video with access to Sora 2 and Veo 3.1 footage.", cost:"From $25/mo"}
+  ],
+  sources: [
+    ["Rockstar releases the GTA 6 launch trailer (gHacks, Oct 16)","https://ghacks.net/2026/10/16/rockstar-releases-the-gta-6-launch-trailer-ahead-of-the-november-19-console-release"],
+    ["Upcoming game release dates, Oct–Dec 2026 (TalkEsport)","https://www.talkesport.com/news/gaming/upcoming-game-release-dates-2026/"],
+    ["5 new gadgets for October 2026 (BGR)","https://www.bgr.com/2278190/new-gadgets-keep-on-radar-october-2026/"],
+    ["Everything Apple still has coming in October (MacRumors)","https://www.macrumors.com/2026/10/13/apple-october-upcoming-products/"],
+    ["Top 100 tech trends in October (Trend Hunter)","https://www.trendhunter.com/slideshow/october-2026-tech"],
+    ["YouTube clarifies policies around AI slop (TechCrunch, Jul 20)","https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/"],
+    ["Does AI impact YouTube monetization? (MilX)","https://milx.app/en/trends/does-ai-impact-youtube-monetization-what-youtube-has-to-say"],
+    ["8 YouTube trends for 2026 (MilX)","https://milx.app/en/trends/8-youtube-trends-for-2026-every-creator-must-know"],
+    ["Gaming Shorts in 2026 strategy (Cowral)","https://www.cowral.com/blog/gaming-shorts-strategy"],
+    ["10 YouTube Shorts niches (TubeBuddy)","https://www.tubebuddy.com/blog/10-youtube-shorts-niches/"],
+    ["YouTube Shorts trends 2026 (Anijam)","https://www.anijam.ai/blog/youtube-shorts-trends/"],
+    ["YouTube trends 2026, 799,718 videos (Metricool)","https://metricool.com/youtube-trends/"],
+    ["How to make viral Shorts in 2026 (Praper Media)","https://prapermedia.com/blog/make-viral-youtube-shorts/"],
+    ["Short-form video trends 2026 (Kineclip)","https://kineclip.com/blog/short-form-video-trends-2026/"],
+    ["Video content trends for 2026 (MilX)","https://milx.app/en/trends/video-content-trends-for-2026-on-youtube-and-social-media"],
+    ["Generative AI creation tools, Made on YouTube (YouTube Blog)","https://blog.youtube/news-and-events/generative-ai-creation-tools-made-on-youtube-2025/"],
+    ["AI tools for creators (MonitorYT)","https://monitoryt.com/blog/ai-tools-for-creators"],
+    ["8 AI tools to automate YouTube growth (AIR)","https://air.io/en/ai-tools/8-ai-tools-to-automate-youtube-growth-in-2026"]
+  ]
+};
+/* ===== END WEEKLY DATA ===== */
+
+const GENRES = {gaming:"Gaming", edu:"Education", comedy:"Comedy", tech:"Tech"};
+const HEAT = {hot:["Hot",3], rising:["Rising",2], seasonal:["Seasonal",2], steady:["Steady",1]};
+const ORDER = {hot:0, rising:1, seasonal:2, steady:3};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const day = d => new Date(d+"T12:00:00");
+const fmt = d => day(d).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+const meter = lvl => `<i>${[1,2,3].map(n=>`<b class="${n<=lvl?"on":""}"></b>`).join("")}</i>`;
+const ls = {
+  get(k,f){ try{ const v = localStorage.getItem(k); return v===null?f:JSON.parse(v); }catch(e){ return f; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+let made = ls.get("radar-made", {});
+let filter = ls.get("radar-filter2", "all");
+if(filter!=="all" && !GENRES[filter]) filter="all";
+
+// "Now" is the real date, but never earlier than the last refresh
+const now = (()=>{ const t=new Date(); t.setHours(12,0,0,0); const u=day(DATA.updated); return t<u?u:t; })();
+const daysTo = d => Math.round((day(d)-now)/864e5);
+
+/* ---------- Hero ---------- */
+document.getElementById("weekpill").textContent = "Week of " + fmt(DATA.updated);
+const hot = DATA.trends.filter(t=>t.heat==="hot");
+const upcoming = DATA.moments.filter(m=>daysTo(m.date)>=0);
+document.getElementById("stats").innerHTML = [
+  [DATA.trends.length,"ideas this week"],[hot.length,"tied to right now"],[upcoming.length,"moments ahead"]
+].map(([n,l])=>`<div class="stat"><span class="n">${n}</span><span class="l">${l}</span></div>`).join("");
+
+// Phone feed: one hot idea per genre first, then the rest of the hot ones
+const feed = []; const seen = new Set();
+hot.forEach(t=>{ if(!seen.has(t.g)){ feed.push(t); seen.add(t.g);} });
+hot.forEach(t=>{ if(!feed.includes(t)) feed.push(t); });
+if(!feed.length) feed.push(...DATA.trends.slice(0,4));
+const screen = document.getElementById("screen");
+const ICONS = `<div class="rail" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.4.7-1.2 2.2-2.4 4.3-2.4 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 4l8 7-8 7v-4.2c-5 0-8.3 1.6-11 5.2 1-5.3 4-10.2 11-11V4z"/></svg>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></svg>
+</div>`;
+screen.innerHTML = `<div class="segs">${feed.map(()=>"<span><i></i></span>").join("")}</div>` +
+  feed.map((t,i)=>`<div class="slide g-${t.g}" role="group" aria-roledescription="slide" aria-label="${i+1} of ${feed.length}" ${i?'aria-hidden="true"':""}>
+    <div class="who"><span class="av">${GENRES[t.g][0]}</span>yourchannel · ${GENRES[t.g]}</div>
+    <div class="hk">${esc(t.hook)}</div>
+    <div class="meta"><span class="mono">${HEAT[t.heat][0]} · ${GENRES[t.g]}</span><b>${esc(t.title)}</b></div>
+  </div>`).join("") + ICONS;
+const slides = [...screen.querySelectorAll(".slide")], segs = [...screen.querySelectorAll(".segs span")];
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let cur = 0, timer = null, paused = reduce;
+const DUR = 4200;
+function show(i){
+  cur = (i+slides.length)%slides.length;
+  slides.forEach((s,k)=>{ s.classList.toggle("on",k===cur); s.setAttribute("aria-hidden", k===cur?"false":"true"); });
+  segs.forEach((s,k)=>{ s.className = k<cur?"done":k===cur?"cur":""; });
+  const seg = segs[cur]; if(seg){ const i2 = seg.firstElementChild; i2.style.animation="none"; void i2.offsetWidth; i2.style.animation=""; }
+  document.getElementById("ct").textContent = `${String(cur+1).padStart(2,"0")} / ${String(slides.length).padStart(2,"0")} · ${GENRES[feed[cur].g]}`;
+  schedule();
+}
+function schedule(){ clearTimeout(timer); if(!paused) timer = setTimeout(()=>show(cur+1), DUR); }
+function setPaused(p){
+  paused = p; screen.classList.toggle("playing", !p);
+  const b = document.getElementById("pause"); b.textContent = p?"▶":"❚❚"; b.setAttribute("aria-label", p?"Play":"Pause");
+  show(cur);
+}
+screen.style.setProperty("--dur", DUR+"ms");
+screen.addEventListener("click", ()=>show(cur+1));
+document.getElementById("next").onclick = ()=>show(cur+1);
+document.getElementById("prev").onclick = ()=>show(cur-1);
+document.getElementById("pause").onclick = ()=>setPaused(!paused);
+setPaused(paused);
+
+/* ---------- Countdown + timeline ---------- */
+const next = upcoming[0];
+if(next){
+  const n = daysTo(next.date);
+  const same = upcoming.filter(m=>m.date===next.date);
+  document.getElementById("cdn").textContent = n===0 ? "0" : n;
+  document.getElementById("cdu").textContent = n===0 ? "Today" : n===1 ? "Day to go" : "Days to go";
+  document.getElementById("cdw").innerHTML = `<b>${esc(next.label)}:</b> ${same.map(m=>esc(m.what)).join(" · ")}`;
+} else {
+  document.getElementById("cdn").textContent = "—";
+  document.getElementById("cdu").textContent = "No dates yet";
+}
+function timeline(){
+  const el = document.getElementById("tl");
+  const ms = DATA.moments.map(m=>({...m,t:day(m.date)})).sort((a,b)=>a.t-b.t);
+  if(!ms.length){ el.innerHTML=""; return; }
+  const W = Math.max(el.clientWidth||0, 880), LBL = 172, AX = 220, LANE = 92;
+  const t0 = Math.min(ms[0].t, now) - 2*864e5, t1 = Math.max(ms[ms.length-1].t, now) + 2*864e5;
+  const usable = W - LBL; // keep the last label inside the track
+  const px = t => ((t-t0)/(t1-t0))*usable + 12;
+  const nowX = px(now);
+  // Lanes: 0 = above near, 1 = below near, 2 = above far, 3 = below far
+  const ends = [-1e9,-1e9,-1e9,-1e9];
+  let html = `<div class="axis"></div><div class="past" style="width:${nowX}px"></div><div class="today" style="left:${nowX}px"><span>TODAY</span></div>`;
+  ms.forEach(m=>{
+    const x = px(m.t);
+    let lane = ends.findIndex(e => e <= x - 12);
+    if(lane<0) lane = ends.indexOf(Math.min(...ends));
+    ends[lane] = x - 12 + LBL + 8;
+    const up = lane%2===0, stem = 16 + (lane>1 ? LANE : 0);
+    const g = m.tags[0]||"gaming"; const past = m.t < now;
+    const pos = up ? `bottom:${AX}px;padding-bottom:${stem+6}px` : `top:${AX+2}px;padding-top:${stem+6}px`;
+    html += `<div class="ev ${up?"up":"down"} g-${g} ${past?"is-past":""}" style="left:${x}px;${pos}">
+      <span class="stem" style="height:${stem}px"></span><span class="dot"></span>
+      <div class="d">${esc(m.label)}${past?" · out now":""}</div>
+      <div class="w">${esc(m.what)}</div>
+      <div class="gtag">${m.tags.map(t=>`<i class="g-${t}" title="${GENRES[t]||t}"></i>`).join("")}</div>
+    </div>`;
+  });
+  el.innerHTML = html;
+}
+timeline();
+let rz; addEventListener("resize", ()=>{ clearTimeout(rz); rz = setTimeout(timeline, 150); });
+
+/* ---------- Ideas ---------- */
+const tabs = document.getElementById("tabs");
+function renderTabs(){
+  tabs.innerHTML = [["all","All genres"],...Object.entries(GENRES)].map(([k,l])=>{
+    const n = k==="all" ? DATA.trends.length : DATA.trends.filter(t=>t.g===k).length;
+    return `<button class="tab ${k==="all"?"all":"g-"+k}" data-f="${k}" aria-pressed="${filter===k}"><span class="sw"></span>${l}<span class="n">${n}</span></button>`;
+  }).join("");
+}
+tabs.addEventListener("click", e=>{
+  const b = e.target.closest(".tab"); if(!b) return;
+  filter = b.dataset.f; ls.set("radar-filter2", filter); renderTabs(); renderGrid();
+});
+const keyOf = t => (t.g+"|"+t.title).toLowerCase();
+function renderGrid(){
+  const list = DATA.trends.filter(t=>filter==="all"||t.g===filter).slice().sort((a,b)=>ORDER[a.heat]-ORDER[b.heat]);
+  document.getElementById("grid").innerHTML = list.map((t,i)=>{
+    const [hl,lvl] = HEAT[t.heat]||["",1]; const k = keyOf(t); const id = `made-${t.g}-${i}`;
+    const url = "https://www.youtube.com/results?search_query="+encodeURIComponent(t.q+" #shorts");
+    return `<article class="card g-${t.g} ${made[k]?"done":""}">
+      <div class="scr">
+        <div class="scr-top"><span class="gname">${GENRES[t.g]}</span><span class="heat">${meter(lvl)}${hl}</span></div>
+        <div class="hk">${esc(t.hook)}</div>
+        <div class="scr-bot"><span>0:00</span><span class="prog"></span><span>0:30</span></div>
+      </div>
+      <div class="body">
+        <h3>${esc(t.title)}</h3>
+        <dl>
+          <div><dt>Why it works</dt><dd>${esc(t.why)}</dd></div>
+          <div><dt>Make your own</dt><dd>${esc(t.make)}</dd></div>
+          <div class="aibox"><dt>AI angle</dt><dd>${esc(t.ai)}</dd></div>
+        </dl>
+        <div class="foot">
+          <a class="yt" href="${url}" target="_blank" rel="noopener"><span class="ar">▶</span>See examples on YouTube</a>
+          <label class="made" for="${id}"><input type="checkbox" id="${id}" data-k="${esc(k)}" ${made[k]?"checked":""}>I made this</label>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+}
+document.getElementById("grid").addEventListener("change", e=>{
+  const c = e.target; if(!c.dataset.k) return;
+  if(c.checked) made[c.dataset.k]=1; else delete made[c.dataset.k];
+  ls.set("radar-made", made); c.closest(".card").classList.toggle("done", c.checked);
+});
+
+/* ---------- AI matrix + tools ---------- */
+(function matrix(){
+  const g = Object.keys(GENRES);
+  let h = `<div class="corner"></div>` + g.map(k=>`<div class="hdr g-${k}"><div class="mh"><i></i>${GENRES[k]}</div></div>`).join("");
+  [["topic","AI as the topic","Shorts about AI"],["tool","AI as your tool","AI helps you make them"]].forEach(([key,lab,sub],r)=>{
+    h += `<div class="rh ${r?"last":""}">${lab}<small>${sub}</small></div>`;
+    h += g.map(k=>{
+      const items = (DATA.ai[k]&&DATA.ai[k][key])||[];
+      return `<div class="g-${k} ${r?"last":""}"><span class="mono" style="color:var(--ai);font-weight:600;display:block;margin-bottom:10px">${r?"Tool":"Topic"} · ${GENRES[k]}</span><ul>${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
+    }).join("");
+  });
+  document.getElementById("matrix").innerHTML = h;
+})();
+document.getElementById("belt").innerHTML = DATA.tools.map(t=>
+  `<div class="tool"><div class="row"><b>${esc(t.name)}</b><span class="cost ${t.cost==="Free"?"free":""}">${esc(t.cost)}</span></div><p>${esc(t.does)}</p></div>`).join("");
+document.getElementById("sources").innerHTML = DATA.sources.map(([t,u])=>
+  `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join("");
+
+renderTabs(); renderGrid();
+</script>
+
+</body>
+</html>
